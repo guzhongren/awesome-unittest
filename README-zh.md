@@ -1,6 +1,7 @@
 # awesome-unittest
 
-A collection of unit test in all kinds of language and framework
+[English](./README.md)|中文
+
 各种语言和框架的单元测试的集合
 
 ## 贡献

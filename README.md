@@ -1,5 +1,7 @@
 # awesome-unittest
 
+English|[中文](./README-zh.md)
+
 A collection of unit test in all kinds of language and framework
 
 ## Contribute
