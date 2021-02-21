@@ -42,4 +42,5 @@ jobs:
       run: |
         cd ./JavaScript/Frontend
         npm install -g yarn
+        yarn
         yarn cover
