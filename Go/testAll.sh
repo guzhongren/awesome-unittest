@@ -1,10 +1,10 @@
-#/bin/bash
+#!/bin/bash
 
-dirList=$(ls -l ./ |awk '/^d/ {print $NF}')
+dirList=$(find ./ |awk '/^d/ {print $NF}')
 
 for dir in $dirList
 do
-  cd $dir
+  cd "$dir" || exit
   testResult=$(go test -failfast -coverprofile=coverage.out)
   echo "test $testResult"
   if [[ "$testResult" =~ "FAIL" ]]
