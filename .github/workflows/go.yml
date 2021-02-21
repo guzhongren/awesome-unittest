@@ -13,10 +13,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Run Shellcheck
+      uses: azohra/shell-linter@latest
+        
     - name: Set up Go
       uses: actions/setup-go@v2
       with:
         go-version: 1.15
 
     - name: Test
-      run: go test -v ./...
+      run: ./Go/testAll.sh
