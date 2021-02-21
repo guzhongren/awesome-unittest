@@ -4,9 +4,14 @@ describe('onError test', () => {
     it('should set the error DOM element', () => {
         const positionError = {message: 'unable to get your location'}
 
-        onError(positionError);
+				Object.defineProperty(document, 'getElementById', {
+					writable: true,
+					value: jest.fn().mockReturnValue({}),
+				})
 
-        expect(document.getElementById('error').innerHTML).toEqual(positionError.message);
+        onError(positionError)
 
+				expect(document.getElementById).toHaveBeenCalled()
+				expect(document.getElementById).toBeCalledTimes(1)
     });
 });
