@@ -13,8 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-#     - name: Run Shellcheck
-#       run: docker-compose run --rm shellCheck **/*.sh  
+    - name: Run Shellcheck
+      run: docker-compose run --rm shellCheck **/*.sh  
 
     - name: Set up Go
       uses: actions/setup-go@v2
